@@ -1,0 +1,50 @@
+Soal No.1 Bilangan PRIMA
+
+#include<iostream>
+using namespace std;
+int main(){
+ /*
+  inisialisais i=0 untuk mencetak bilangan prima sejumlah n,
+          cek untuk memastikan apakah bilangan prima atau bukan,
+          bil=2 bilangan prima itu dimulai dari angka 2,n jumlah bilangan prima yang akan dicetak
+ */
+ int i=0, cek, bil=2,n;
+      cout<<"Bilangan Prima n = : ";cin>>n;
+      while(i<n){
+            cek=0;
+            for(int j=2;j<=bil;j++){
+                  if(bil%j==0){
+                   cek++; 
+                  }
+            }
+            if(cek == 1){
+              cout<<bil; 
+                  if(i < n-1){ 
+                       cout<<", ";
+                  }else {
+                    cout<<'.'; 
+                  }
+               i++;
+            }
+          bil++;
+       }
+ }
+
+Soal No.2 Deret Fibonacci
+
+def fibs():
+    a,b = 0,1
+    yield a
+    yield b
+    while True:
+        a,b = b,a+b
+        yield b
+
+n = int(raw_input("please  input fibonacci"))
+for fib in fibs():
+  if n == fib:
+    print "True"
+    break
+  if fib > n:
+    print "False"
+    break
